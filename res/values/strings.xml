@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, lColor!</string>
+    <string name="app_name">lColor</string>
+    <string name="light_units">Chose The Units</string>
+    <string-array name="units_array">
+        <item>nm--nanometers</item>
+        <item>Hz--Hertz (1/s)</item>
+        <item>eV--electron-volts</item>
+        <item>J--Joules</item>
+        <item>1/cm--wavenumbers</item>
+    </string-array>
+    
+</resources>

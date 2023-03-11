@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:myapp="http://schemas.android.com/apk/res/joey.goodknight.light"
+      package="joey.goodknight.light"
+      android:versionName="1.0" android:versionCode="2">
+    <application android:icon="@drawable/ic_launcher_lcolor" android:label="@string/app_name">
+            
+       <uses-feature android:name="android.hardware.touchscreen" />
+        
+        <activity android:name=".lColor"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+                
+<!-- The application's publisher ID assigned by AdMob -->
+<meta-data android:value="a14d0f87dacdfb9" android:name="ADMOB_PUBLISHER_ID" />
+        
+<!-- AdMobActivity definition -->
+<activity android:name="com.admob.android.ads.AdMobActivity"
+android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+android:configChanges="orientation|keyboard|keyboardHidden" />
+<!-- Track Market installs -->          
+<receiver android:name="com.admob.android.ads.analytics.InstallReceiver"
+android:exported="true">
+<intent-filter>
+   <action android:name="com.android.vending.INSTALL_REFERRER" />
+</intent-filter>
+</receiver>
+        
+        
+
+    </application>
+    
+    <supports-screens android:resizeable="true"
+                  android:smallScreens="true" 
+                  android:normalScreens="true" 
+                  android:largeScreens="true"
+                  android:xlargeScreens="true"
+                  android:anyDensity="true" />
+    <uses-sdk android:minSdkVersion="1"/>
+
+<!-- AdMob SDK requires Internet permission -->
+  <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest> 
